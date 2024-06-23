@@ -1,0 +1,29 @@
+version: "3"
+services:
+  monopoly-mongodb:
+    image: mongo
+    expose:
+      - "27017"
+    networks:
+      - monopoly-mongodb
+  monopoly-web:
+    image: lin1214/camp_monopoly
+    expose:
+      - "2022"
+    depends_on:
+      - monopoly-mongodb
+    environment:
+      MONGO_URL: mongodb://monopoly-mongodb/monopoly
+      WEB_DOMAIN: eecamp-monopoly.ntuee.org
+    tty: true
+    stdin_open: true
+    networks:
+      - monopoly-web
+
+networks:
+  monopoly-mongodb:
+    external:
+      name: eeinfo
+  monopoly-web:
+    external:
+      name: eeinfo

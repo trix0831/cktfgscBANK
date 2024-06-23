@@ -1,0 +1,1 @@
+docker exec 2022_camp_monopoly-web_1 yarn initdata
