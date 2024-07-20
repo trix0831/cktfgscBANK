@@ -84,23 +84,23 @@ const App = () => {
               <Route path="notifications" element={<Notifications />} />
               <Route path="teams" element={<Teams />} />
               <Route path="properties" element={<Properties />} />
-              <Route path="sellproperty" element={<SellProperty />} />
+              {/* <Route path="sellproperty" element={<SellProperty />} /> */}
               <Route path="login" element={<Login />} />
               <Route path="addmoney" element={<AddMoney />} />
-              <Route path="setownership" element={<SetOwnership />} />
-              <Route path="transfer" element={<Transfer />} />
-              <Route path="setshop" element={<SetShopLevel />} />
-              <Route path="random" element={<Random />} />
+              {/* <Route path="setownership" element={<SetOwnership />} /> */}
+              {/* <Route path="transfer" element={<Transfer />} /> */}
+              {/* <Route path="setshop" element={<SetShopLevel />} /> */}
+              {/* <Route path="random" element={<Random />} /> */}
               <Route path="event" element={<Event />} />
-              <Route path="additional" element={<Additional />} />
-              <Route path="setoccupation" element={<SetOccupation />} />
-              <Route path="permission" element={<PermissionDenied />} />
+              {/* <Route path="additional" element={<Additional />} /> */}
+              {/* <Route path="setoccupation" element={<SetOccupation />} /> */}
+              {/* <Route path="permission" element={<PermissionDenied />} /> */}
               <Route path="loading" element={<Loading />} />
               <Route path="bank" element={<Bank />} />
-              <Route path="bankrupt" element={<Bankrupt />} />
+              {/* <Route path="bankrupt" element={<Bankrupt />} /> */}
               <Route path="broadcast" element={<Broadcast />} />
-              <Route path="setdice" element={<SetDice />} />
-              <Route path="map" element={<Map />} />
+              {/* <Route path="setdice" element={<SetDice />} /> */}
+              {/* <Route path="map" element={<Map />} /> */}
             </Routes>
           </CSSTransition>
         </TransitionGroup>

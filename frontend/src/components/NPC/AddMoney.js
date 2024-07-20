@@ -267,9 +267,9 @@ const AddMoney = () => {
               justifyContent: "space-between",
             }}
           >
-            <SimpleMoneyButton val={+100} />
-            <SimpleMoneyButton val={+1000} />
-            <SimpleMoneyButton val={+5000} />
+            <SimpleMoneyButton val={+400} />
+            <SimpleMoneyButton val={+600} />
+            <SimpleMoneyButton val={+900} />
           </Box>
           <Box
             sx={{
@@ -278,11 +278,11 @@ const AddMoney = () => {
               justifyContent: "space-between",
             }}
           >
-            <SimpleMoneyButton val={-100} />
+            <SimpleMoneyButton val={-200} />
+            <SimpleMoneyButton val={-300} />
             <SimpleMoneyButton val={-1000} />
-            <SimpleMoneyButton val={-5000} />
           </Box>
-          <Box
+          {/* <Box
             sx={{
               display: "flex",
               flexDirection: "row",
@@ -319,7 +319,7 @@ const AddMoney = () => {
             >
               Upgrade
             </Button>
-          </Box>
+          </Box> */}
           <Box
             sx={{
               display: "flex",
@@ -339,9 +339,9 @@ const AddMoney = () => {
               variant="contained"
               disabled={team === -1 || amount === 0}
               sx={{ marginBottom: 1, width: 80 }}
-              onClick={() => handlePercentMoney(0.5)}
+              onClick={() => handlePercentMoney(0.4)}
             >
-              +50%
+              +40%
             </Button>
             <Button
               variant="contained"
@@ -359,7 +359,7 @@ const AddMoney = () => {
               justifyContent: "space-between",
             }}
           >
-            <Button
+            {/* <Button
               variant="contained"
               disabled={team === -1}
               sx={{ marginBottom: 1, width: 80 }}
@@ -389,8 +389,8 @@ const AddMoney = () => {
               flexDirection: "row",
               justifyContent: "space-between",
             }}
-          >
-            <Button
+          > */}
+            {/* <Button
               variant="contained"
               disabled={team === -1}
               sx={{ marginBottom: 1, width: 120 }}
@@ -405,14 +405,14 @@ const AddMoney = () => {
               onClick={() => handleCard(4)}
             >
               平等
-            </Button>
+            </Button> */}
           </Box>
           <Grid container spacing={1}>
-            <Grid item xs={6}>
+            <Grid item xs={12}>
               <Box display="flex" flexDirection="row" justifyContent="center">
                 <Button
                   variant="contained"
-                  disabled={team === -1 || amount === ""}
+                  disabled={team === -1 || amount === "" || amount === "0"}
                   onClick={handleSubmit}
                   fullWidth
                 >
@@ -420,7 +420,7 @@ const AddMoney = () => {
                 </Button>
               </Box>
             </Grid>
-            <Grid item xs={6}>
+            {/* <Grid item xs={6}>
               <Box display="flex" flexDirection="row" justifyContent="center">
                 <Button
                   variant="contained"
@@ -438,10 +438,10 @@ const AddMoney = () => {
                   <RequestQuoteIcon />
                 </Button>
               </Box>
-            </Grid>
+            </Grid> */}
           </Grid>
         </FormControl>
-        <Box
+        {/* <Box
           sx={{
             marginTop: 1,
             display: "flex",
@@ -487,9 +487,9 @@ const AddMoney = () => {
               </TableBody>
             </Table>
           </TableContainer>
-        </Box>
+        </Box> */}
 
-        {showPreview ? (
+        {/* {showPreview ? (
           <Box
             sx={{ marginTop: 2 }}
             justifyContent="center"
@@ -504,7 +504,7 @@ const AddMoney = () => {
               {teamData.money} &gt;&gt; {newData}
             </Typography>
           </Box>
-        ) : null}
+        ) : null} */}
       </Box>
     </Container>
   );
