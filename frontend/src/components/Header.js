@@ -99,7 +99,7 @@ const Header = () => {
             <MenuIcon />
             <NavBar open={open} />
           </IconButton>
-          <Typography variant="h1">MONOPOLY</Typography>
+          <Typography variant="h1">CKTFGSC BANK</Typography>
           <Button
             sx={{ display: pathname === "/login" && "none" }}
             color="inherit"

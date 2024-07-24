@@ -5,6 +5,7 @@
     "install-backend": "yarn install && cd backend && yarn install && cd ..",
     "install-frontend": "yarn install && cd frontend && yarn install && cd ..",
     "build-frontend": "cd frontend && yarn build && cd ..",
+    "build-backend": "cd backend && yarn build && cd ..",
     "start-frontend": "cd frontend && yarn start && cd ..",
     "start-backend": "cd backend && yarn server && cd ..",
     "initdata": "cd backend && yarn initdata && cd ..",
