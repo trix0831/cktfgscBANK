@@ -1,5 +1,5 @@
 yarn build-frontend
 docker-compose down
-docker image rm rayray2002/monopoly
-docker build . -t rayray2002/monopoly
-docker push rayray2002/monopoly
+docker image rm trix0831/cktfgscBANK
+docker build . -t trix0831/cktfgscBANK
+docker push trix0831/cktfgscBANK
