@@ -72,10 +72,10 @@ const Bank = () => {
     navigate("/teams");
   };
 
-  const handleAccounting = async () => {
-    await axios.post("/accounting");
-    navigate("/teams");
-  };
+  // const handleAccounting = async () => {
+  //   await axios.post("/accounting");
+  //   navigate("/teams");
+  // };
 
   const getTeams = async () => {
     axios
@@ -193,7 +193,7 @@ const Bank = () => {
                 </Box>
 
                 <Grid container spacing={1}>
-                  <Grid item xs={6}>
+                  <Grid item xs={12}>
                     <Box
                       display="flex"
                       flexDirection="row"
@@ -209,7 +209,7 @@ const Bank = () => {
                       </Button>
                     </Box>
                   </Grid>
-                  <Grid item xs={6}>
+                  {/* <Grid item xs={6}>
                     <Box
                       display="flex"
                       flexDirection="row"
@@ -223,12 +223,14 @@ const Bank = () => {
                         <FunctionsIcon />
                       </Button>
                     </Box>
-                  </Grid>
+                  </Grid> */}
                 </Grid>
               </FormControl>
             </Box>
           </Container>
         ) : null}
+
+
         <Paper
           elevation={0}
           sx={{

@@ -224,7 +224,7 @@ const AddMoney = () => {
         }}
       >
         <Typography component="h1" variant="h5" sx={{ marginBottom: 0 }}>
-          Add Money
+          Money Control
         </Typography>
         <FormControl variant="standard" sx={{ minWidth: 250 }}>
           <TeamSelect

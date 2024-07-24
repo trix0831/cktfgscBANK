@@ -52,7 +52,7 @@ export const NPCItems = [
   {
     id: 5,
     icon: <PaidIcon />,
-    label: "Add Money",
+    label: "Money control",
     shortLabel: "Money",
     route: "addmoney",
   },
@@ -70,13 +70,13 @@ export const NPCItems = [
   //   shortLabel: "Transfer",
   //   route: "transfer",
   // },
-  {
-    id: 11,
-    icon: <AccountBalanceIcon />,
-    label: "Bank",
-    shortLabel: "Bank",
-    route: "bank",
-  },
+  // {
+  //   id: 11,
+  //   icon: <AccountBalanceIcon />,
+  //   label: "Bank",
+  //   shortLabel: "Bank",
+  //   route: "bank",
+  // },
   // {
   //   id: 14,
   //   icon: <QuizIcon />,
@@ -94,13 +94,13 @@ export const adminItems = [
     shortLabel: "Event",
     route: "event",
   },
-  {
-    id: 11,
-    icon: <AccountBalanceIcon />,
-    label: "Bank",
-    shortLabel: "Bank",
-    route: "bank",
-  },
+  // {
+  //   id: 11,
+  //   icon: <AccountBalanceIcon />,
+  //   label: "Bank",
+  //   shortLabel: "Bank",
+  //   route: "bank",
+  // },
   // {
   //   id: 13,
   //   icon: <PaidIcon />,
