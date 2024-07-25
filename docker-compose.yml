@@ -7,14 +7,14 @@ services:
     networks:
       - monopoly-mongodb
   monopoly-web:
-    image: lin1214/camp_monopoly
+    image: trix0831/cktfgsc-bank
     expose:
       - "2022"
     depends_on:
       - monopoly-mongodb
     environment:
-      MONGO_URL: mongodb://monopoly-mongodb/monopoly
-      WEB_DOMAIN: eecamp-monopoly.ntuee.org
+      MONGO_URL: mongodb+srv://trix_831:Joseph831@cluster4trix.kfhexca.mongodb.net/?retryWrites=true&w=majority&appName=Cluster4trix
+      WEB_DOMAIN: cktfgsc-bank-z3zpvj7vba-de.a.run.app/
     tty: true
     stdin_open: true
     networks:
@@ -22,8 +22,8 @@ services:
 
 networks:
   monopoly-mongodb:
-    external:
-      name: eeinfo
+    external: true
+    name: eeinfo
   monopoly-web:
-    external:
-      name: eeinfo
+    external: true
+    name: eeinfo

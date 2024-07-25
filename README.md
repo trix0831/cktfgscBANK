@@ -1,9 +1,10 @@
 # 2024_camp
 
-This is the website of game "Monopoly" in NTUEE camp for freshman!
+This is the web bank of game "casino" in the summer camp held by CKSC and TFGSC.
+Program based on the website of game monopoly in NTUEE camp.
 
-2022: By rayray2002, jerry1249756 and hackhaha1\
-2023: By lin-1214
+Main author: trix0831
+NTUEE contributor: rayray2002, jerry1249756, hackhaha1, lin-1214, trix0831
 
 ## Development
 ### Install packages

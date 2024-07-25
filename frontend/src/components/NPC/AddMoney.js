@@ -2,9 +2,6 @@ import React, { useState, useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import {
   Container,
-  InputLabel,
-  Select,
-  MenuItem,
   TextField,
   Typography,
   Box,
@@ -56,15 +53,6 @@ const AddMoney = () => {
     setTeam(team);
   };
 
-  const checkPropertyCost = async (mode) => {
-    const payload = { team: team, building: building, mode: mode };
-    const {
-      data: { message },
-    } = await axios.post("/checkPropertyCost", payload);
-    console.log(message);
-    setCheckMessage(message);
-  };
-
   const handleAmount = async (amount) => {
     if (amount !== "-" && amount !== "" && team !== -1) {
       setShowPreview(true);
@@ -86,57 +74,21 @@ const AddMoney = () => {
     // console.log(data);
   };
 
-  const handleJeff = async () => {
-    const { data } = await axios.get("/teamRich");
-    console.log(data);
-    setJeff(true);
-    setJeffTeam(data.id);
-    handleAmount(Math.round(data.money * 0.25));
-  };
-
-  const handleCard = async (number) => {
-    if (number === 0) {
-      // 小隊現金*1.5，最多30000
-      setAmount(teamData.money * 0.5 > 30000 ? 30000 : teamData.money * 0.5);
-    } else if (number === 1) {
-      // 強制拍賣地產，賣得的錢七三分，地主七
-      const payload = { building: building };
-      const { data } = await axios.post("/goldenFruit", payload);
-      console.log(data);
-      handleAmount(
-        Math.round(
-          (data.land[0].price.buy +
-            data.land[0].price.upgrade * (data.level - 1)) *
-            0.03
-        ) * 10
-      );
-      navigate("/teams");
-      setNavBarId(2);
-    } else if (number === 2) {
-      // 全部損失5000
-      await axios.post("/tape");
-      navigate("/teams");
-      setNavBarId(2);
-    } else if (number === 3) {
-      // 搶走錢最後一名的隨機一棟房子
-      const payload = { id: team };
-      const { data } = await axios.post("/rob", payload);
-      console.log(data);
-      if (data.building) navigate("/properties?id=" + data.building);
-      else navigate("/properties");
-      setNavBarId(3);
-    } else if (number === 4) {
-      // 與金錢榜前一名小隊平分金錢
-      const payload = { id: team };
-      await axios.post("/equility", payload);
-      navigate("/teams");
-      setNavBarId(2);
+const handleInterest = async () => {
+    try {
+      await axios.post("/interest", {});
+    } catch (error) {
+      console.error("Error adding interest:", error);
     }
-  };
 
-  const handlePercentMoney = async (percent) => {
-    handleAmount(Math.round(amount * (1 + percent)));
+    alert("interest added");
+    navigate("/teams");
   };
+  
+
+  // const handlePercentMoney = async (percent) => {
+  //   handleAmount(Math.round(amount * (1 + percent)));
+  // };
 
   const handlePreview = async () => {
     const { data } = await axios.get("/add", {
@@ -157,17 +109,6 @@ const AddMoney = () => {
     setJeff(false);
     navigate("/teams");
     setNavBarId(2);
-  };
-
-  const handleSubmitAndSetOwnership = async () => {
-    const payload = {
-      id: team,
-      teamname: `第${team}小隊`,
-      dollar: parseInt(amount) ? parseInt(amount) : 0,
-    };
-    await axios.post("/add", payload);
-    navigate("/setownership?id=" + building + "&team=" + team);
-    setNavBarId(6);
   };
 
   const SimpleMoneyButton = ({ val }) => {
@@ -320,7 +261,7 @@ const AddMoney = () => {
               Upgrade
             </Button>
           </Box> */}
-          <Box
+          {/* <Box
             sx={{
               display: "flex",
               flexDirection: "row",
@@ -351,7 +292,7 @@ const AddMoney = () => {
             >
               +100%
             </Button>
-          </Box>
+          </Box> */}
           <Box
             sx={{
               display: "flex",
@@ -359,53 +300,15 @@ const AddMoney = () => {
               justifyContent: "space-between",
             }}
           >
-            {/* <Button
-              variant="contained"
-              disabled={team === -1}
-              sx={{ marginBottom: 1, width: 80 }}
-              onClick={() => handleCard(0)}
-            >
-              縣城
-            </Button>
             <Button
               variant="contained"
-              disabled={team === -1 || building === -1}
-              sx={{ marginBottom: 1, width: 80 }}
-              onClick={() => handleCard(1)}
+              sx={{ marginBottom: 1 , flexGrow: 1}}
+              onClick={() => {
+                handleInterest();
+              }}
             >
-              金蔓
+              interest
             </Button>
-            <Button
-              variant="contained"
-              sx={{ marginBottom: 1, width: 80 }}
-              onClick={() => handleCard(2)}
-            >
-              紙膠
-            </Button>
-          </Box>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "row",
-              justifyContent: "space-between",
-            }}
-          > */}
-            {/* <Button
-              variant="contained"
-              disabled={team === -1}
-              sx={{ marginBottom: 1, width: 120 }}
-              onClick={() => handleCard(3)}
-            >
-              打劫
-            </Button>
-            <Button
-              variant="contained"
-              disabled={team === -1}
-              sx={{ marginBottom: 1, width: 120 }}
-              onClick={() => handleCard(4)}
-            >
-              平等
-            </Button> */}
           </Box>
           <Grid container spacing={1}>
             <Grid item xs={12}>

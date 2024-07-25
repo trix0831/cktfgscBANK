@@ -22,11 +22,11 @@ mongoose.connect(process.env.MONGO_URL, {
 const users = [
   {
     username: "admin",
-    password: "FFaYwnz2ynAQ",
+    password: "adminTrix",
   },
   {
     username: "NPC",
-    password: "pp9AxWvSh35z",
+    password: "NPCcktfg",
   },
   {
     username: "第01小隊",
@@ -481,25 +481,25 @@ const events = [
     id: 1,
     title: "表董大量拋售股票造成金融海嘯衝擊。",
     description:
-      "效果：所有人所得x0.8",
+      "效果：所有人存款x0.8",
   },
   {
     id: 2,
     title: "表男主結婚，表董十分高興，決定大撒幣。",
     description:
-      "效果：所有人所得+4000 ",
+      "效果：所有人存款+4000 ",
   },
   {
     id: 3,
     title: "大台北建設公司股息發下，持股人獲利。",
     description:
-      "效果：所有人所得x1.4",
+      "效果：所有人存款x1.4",
   },
   {
     id: 4,
     title: "間諜入侵公司系統，偷取機密資料，造成公司營運空轉。",
     description:
-      "效果：所有人所得-2000",
+      "效果：所有人存款-2000",
   },
 ];
 

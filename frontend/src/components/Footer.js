@@ -5,6 +5,7 @@ import {
   AppBar,
   BottomNavigation,
   BottomNavigationAction,
+  Box,
 } from "@mui/material";
 import RoleContext from "./useRole";
 
@@ -44,6 +45,16 @@ const Footer = () => {
       >
         {items.map(mapping)}
       </BottomNavigation>
+
+      <Box
+        sx={{
+          textAlign: "center",  // Centers the text horizontally
+          fontSize: "0.8rem",   // Adjusts the text size; you can use different units or values as needed
+          top: 0,
+        }}
+      >
+        Website created by 建科37 徐立承
+      </Box>
     </AppBar>
   );
 };
