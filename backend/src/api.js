@@ -373,7 +373,7 @@ router
           {
             const teams = await Team.find();
             for (let i = 0; i < teams.length; i++) {
-              teams[i].money = math.round(team[i].money * 0.8);
+              teams[i].money = Math.round(teams[i].money * 0.8);
               await teams[i].save();
             }
             res.json("Success").status(200);
@@ -393,7 +393,7 @@ router
           {
             const teams = await Team.find();
             for (let i = 0; i < teams.length; i++) {
-              teams[i].money = math.round(teams[i].money * 1.4);
+              teams[i].money = Math.round(teams[i].money * 1.4);
               await teams[i].save();
             }
             res.json("Success").status(200);

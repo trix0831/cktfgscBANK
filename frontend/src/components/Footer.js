@@ -51,6 +51,8 @@ const Footer = () => {
           textAlign: "center",  // Centers the text horizontally
           fontSize: "0.8rem",   // Adjusts the text size; you can use different units or values as needed
           top: 0,
+          backgroundColor: "#545454",  // Changes the background color
+          color: "#c4c4c4",
         }}
       >
         Website created by 建科37 徐立承

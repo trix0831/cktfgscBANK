@@ -92,9 +92,9 @@ const Teams = () => {
                           style={{ userSelect: "none" }}
                         >
                           {column.id === "money"
-                            ? Math.round(item[column.id]) > 0
+                            ? Math.round(item[column.id]) >= 0
                               ? Math.round(item[column.id])
-                              : "破產"
+                              : `${Math.round(item[column.id])} (破產)`
                             : column.id === "resources"
                             ? `Gold: ${item[column.id].gold}, Meat: ${
                                 item[column.id].meat
